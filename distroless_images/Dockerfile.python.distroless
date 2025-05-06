@@ -1,0 +1,10 @@
+FROM python:3.10 AS builder
+WORKDIR /app
+COPY . .
+RUN pip install --target /python-deps -r requirements.txt
+
+FROM gcr.io/distroless/python3
+COPY --from=builder /app /app
+COPY --from=builder /python-deps /python-deps
+ENV PYTHONPATH=/python-deps
+CMD ["app/main.py"]
