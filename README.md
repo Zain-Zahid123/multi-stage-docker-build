@@ -1,10 +1,5 @@
 # Repo to learn Docker with examples. Contributions are most welcome.
 
-## If you found this repo useful, give it a STAR 🌠
-
-You can watch the video version of this repo on my youtube playlist. -> https://www.youtube.com/watch?v=7JZP345yVjw&list=PLdpzxOOAlwvLjb0vTD9BXLOwwLD_GWCmC
-
-
 ## What is a container ?
 
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
@@ -12,10 +7,6 @@ A container is a standard unit of software that packages up code and all its dep
 Ok, let me make it easy !!!
 
 A container is a bundle of Application, Application libraries required to run your application and the minimum system dependencies.
-
-![Screenshot 2023-02-07 at 7 18 10 PM](https://user-images.githubusercontent.com/43399466/217262726-7cabcb5b-074d-45cc-950e-84f7119e7162.png)
-
-
 
 ## Containers vs Virtual Machine 
 
@@ -40,10 +31,6 @@ Let's try to understand this with an example:
 Below is the screenshot of official ubuntu base image which you can use for your container. It's just ~ 22 MB, isn't it very small ? on a contrary if you look at official ubuntu VM image it will be close to ~ 2.3 GB. So the container base image is almost 100 times less than VM image.
 
 ![Screenshot 2023-02-08 at 3 12 38 PM](https://user-images.githubusercontent.com/43399466/217493284-85411ae0-b283-4475-9729-6b082e35fc7d.png)
-
-
-To provide a better picture of files and folders that containers base images have and files and folders that containers use from host operating system (not 100 percent accurate -> varies from base image to base image). Refer below.
-
 
 
 ### Files and Folders in containers base images
@@ -314,21 +301,6 @@ Output of the above command
     Successfully tagged abhishekf5/my-first-docker-image:latest
 ```
 
-### Verify Docker Image is created
-
-```
-docker images
-```
-
-Output 
-
-```
-REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
-abhishekf5/my-first-docker-image   latest    960d37536dcd   26 seconds ago   467MB
-ubuntu                             latest    58db3edaf2be   13 days ago      77.8MB
-hello-world                        latest    feb5d9fea6a5   16 months ago    13.3kB
-```
-
 ### Run your First Docker Container
 
 ```
@@ -359,5 +331,3 @@ c5ff2d88f679: Mounted from library/ubuntu
 latest: digest: sha256:6e49841ad9e720a7baedcd41f9b666fcd7b583151d0763fe78101bb8221b1d88 size: 1157
 ```
 
-### You must be feeling like a champ already 
-# multi-stage-docker-build
